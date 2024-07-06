@@ -2,16 +2,11 @@ import { useQuery } from "react-query";
 import { fetchCharacters } from "../services/api";
 import styled from "styled-components";
 import Character from "./character";
+import Loading from "./loading";
 
 const Container = styled.div`
   display: flex;
   gap: 10px;
-`;
-const Loading = styled.div`
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 interface ICha {
@@ -27,7 +22,7 @@ export default function Characters() {
   );
 
   return isLoading ? (
-    <Loading>Loading...</Loading>
+    <Loading></Loading>
   ) : error ? (
     <div>Error</div>
   ) : (

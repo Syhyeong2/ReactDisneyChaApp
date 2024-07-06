@@ -1,23 +1,18 @@
-import { createBrowserRouter } from "react-router-dom";
-import Root from "./Root";
-import Characters from "./components/characters";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Detail from "./pages/detail";
+import Main from "./pages/main";
+import Header from "./components/header";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "/",
-        element: <Characters />,
-      },
-    ],
-  },
-  {
-    path: "/character/:id",
-    element: <Detail />,
-  },
-]);
+function AppRouter() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="character/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-export default router;
+export default AppRouter;

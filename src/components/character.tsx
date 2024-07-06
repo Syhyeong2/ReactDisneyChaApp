@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const IMGURL =
+export const IMGURL =
   "https://i.scdn.co/image/ab6761610000e5ebc698d53b77db34027b00f853";
 
 const Img = styled.img`
