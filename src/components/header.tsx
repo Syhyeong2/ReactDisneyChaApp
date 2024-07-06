@@ -9,8 +9,8 @@ const Container = styled.div`
 `;
 
 const ContainerSpan = styled.span`
-  color: gray;
   font-size: 48px;
+  font-weight: bolder;
 `;
 
 const Btn = styled.div``;
